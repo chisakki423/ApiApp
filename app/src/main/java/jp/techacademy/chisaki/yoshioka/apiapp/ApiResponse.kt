@@ -1,6 +1,6 @@
 package jp.techacademy.chisaki.yoshioka.apiapp
 import com.google.gson.annotations.SerializedName
-
+import java.io.Serializable
 
 data class ApiResponse(
     @SerializedName("results")
@@ -14,26 +14,27 @@ data class Results(
 
 data class Shop(
 
-    @SerializedName("address")
-    var address: String,
+        @SerializedName("address")
+        var address: String,
 
-    @SerializedName("coupon_urls")
-    val couponUrls: CouponUrls,
+        @SerializedName("coupon_urls")
+        var couponUrls: CouponUrls,
 
-    @SerializedName("id")
-    val id: String,
+        @SerializedName("id")
+        var id: String,
 
-    @SerializedName("logo_image")
-    val logoImage: String,
+        @SerializedName("logo_image")
+        var logoImage: String,
 
-    @SerializedName("name")
-    val name: String,
+        @SerializedName("name")
+        var name: String,
 
-)
+        ): Serializable
 
 data class CouponUrls(
     @SerializedName("pc")
-    val pc: String,
+    var pc: String,
     @SerializedName("sp")
-    val sp: String
+    var sp: String
 )
+
